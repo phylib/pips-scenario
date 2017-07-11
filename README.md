@@ -143,7 +143,12 @@ or
 Available simulations
 =====================
 
-
+PIPS-scenario-simple
 ---------------
 
-Description
+A simple scenario used to showcase the forwarding strategy in action.
+
+PIPS-scenario
+---------------
+
+An advanced scenario used for reproducable evaluations.

@@ -1,0 +1,35 @@
+router
+#name	city			latitude	longitude
+#ATLA-M5	Atlanta_GA		3.3750000	-8.4383300
+ATLA-M5	Atlanta_GA		3.0750000	-8.1383300
+ATLAng	Atlanta_GA		3.3850000	-8.4483300
+CHINng	Chicago_IL		4.1833300	-8.7616700
+DNVRng	Denver_CO		4.0750000	-10.5000000
+HSTNng	Houston_TX		2.9770031	-9.5517364
+IPLSng	Indianapolis_IN	3.9780622	-8.6159535
+KSCYng	Kansas_City_MO	3.8961694	-9.6596704
+LOSAng	Los_Angeles_CA	3.4050000	-11.8250000
+NYCMng	New_York_NY		4.0783300	-7.3966700
+SNVAng	Sunnyvale_CA	3.738575	-12.202553
+STTLng	Seattle_WA		4.7600000	-12.2300000
+WASHng	Washington_DC	3.8897303	-7.7026842
+
+link
+#capacity on 4/10/2003 (see page 20 of http://www.internet2.edu/presentations/spring03/20030410-Abilene-Corbato.pdf)
+#OSPF weight on 04/10/2003 (see http://www.abilene.iu.edu/images/Ab-IGP-topo.jpg)
+#x		y		capacity(kbps)	OSPF
+ATLAng	ATLA-M5	9920000 		1
+ATLAng	HSTNng	9920000 		1176
+ATLAng	IPLSng	2480000 		587
+ATLAng	WASHng	9920000 		846
+CHINng	IPLSng	9920000 		260
+CHINng	NYCMng	9920000 		700
+DNVRng	KSCYng	9920000 		639
+DNVRng	SNVAng	9920000 		1295
+DNVRng	STTLng	9920000 		2095
+HSTNng	KSCYng	9920000 		902
+HSTNng	LOSAng	9920000 		1893
+IPLSng	KSCYng	9920000 		548
+LOSAng	SNVAng	9920000 		366
+NYCMng	WASHng	9920000 		233
+SNVAng	STTLng	9920000 		861

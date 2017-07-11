@@ -1,0 +1,71 @@
+# topo-testing-groun.txt
+
+# any empty lines and lines starting with '#' symbol is ignored
+#
+# The file should contain exactly two sections: router and link, each starting with the corresponding keyword
+#
+# router section defines topology nodes and their relative positions (e.g., to use in visualizer)
+router
+
+# each line in this section represents one router and should have the following data
+# node  		comment     yPos    xPos
+
+Cons1   		NA          3.5     1
+Prod2   		NA          2.5     1
+End1 			NA          3       2
+
+NodeA			NA          4       2.9
+NodeB			NA          3       3
+NodeC			NA          2       3.1
+NodeD			NA          4       3.9
+NodeE			NA          3     	4
+NodeF			NA          2	    4.1
+NodeG			NA          4       4.9
+NodeH			NA          3     	5
+NodeI			NA          2	    5.1
+
+End2			NA          3       6
+Cons2  			NA          3.5     7
+Prod1  			NA          2.5     7
+
+
+
+# Note that `node` can be any string. It is possible to access to the node by name using Names::Find, see examples.
+
+# link section defines point-to-point links between nodes and characteristics of these links
+link
+
+# Each line should be in the following format (only first two are required, the rest can be omitted)
+# bandwidth: link bandwidth
+# metric: routing metric
+# delay:  link delay
+# queue:  MaxPackets for transmission queue on the link (both directions)
+
+# srcNode   		dstNode     	bandwidth   metric  delay   queue
+Cons1       		End1       		1Mbps       1       10ms    10
+Prod2       		End1      		1Mbps       1       10ms    10
+End1       			NodeA       	1Mbps       1       10ms    10
+End1       			NodeB       	1Mbps       1       10ms    10
+End1       			NodeC       	1Mbps       1       10ms    10
+# variable connections
+NodeA       		NodeD			1Mbps       1       10ms    10
+NodeA       		NodeB			1Mbps       1       10ms    10
+NodeB       		NodeE			1Mbps       1       10ms    10
+NodeB       		NodeC			1Mbps       1       10ms    10
+NodeC       		NodeF			1Mbps       1       10ms    10
+NodeD       		NodeG			1Mbps       1       10ms    10
+NodeD       		NodeE			1Mbps       1       10ms    10
+NodeE       		NodeH			1Mbps       1       10ms    10
+NodeE       		NodeF			1Mbps       1       10ms    10
+NodeF       		NodeI			1Mbps       1       10ms    10
+NodeG       		End2			1Mbps       1       10ms    10
+NodeG       		NodeH			1Mbps       1       10ms    10
+NodeH       		End2			1Mbps       1       10ms    10
+NodeH       		NodeI			1Mbps       1       10ms    10
+NodeI       		End2			1Mbps       1       10ms    10
+# if delay betwen DelayNode and End2 is close to 1000ms the DelayNode somehow doesn't forward data packets back anymore.
+End2  				Prod1    		1Mbps       1       10ms    10
+End2  				Cons2    		1Mbps       1       10ms    10
+
+
+

@@ -77,7 +77,7 @@ The code was tested with ndnSIM version 2.3.
     cd ../pips-scenario
     ./waf configure
     ./waf
-    ./waf --run=lowest-cost-scenario --vis
+    ./waf --run=PIPS-scenario-simple --vis
 
 Compiling
 =========
@@ -143,7 +143,7 @@ or
 Available simulations
 =====================
 
-<Scenario Name>
+
 ---------------
 
 Description

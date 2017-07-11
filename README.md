@@ -151,4 +151,4 @@ A simple scenario used to showcase the forwarding strategy in action.
 PIPS-scenario
 ---------------
 
-An advanced scenario used for reproducable evaluations.
+An advanced scenario used for reproducible evaluations.

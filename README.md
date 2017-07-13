@@ -13,7 +13,7 @@ The code was tested with ndnSIM version 2.3. on Ubuntu 16.04.1 LTS
     sudo apt-get install python-dev python-pygraphviz python-kiwi python-pygoocanvas python-gnome2 python-rsvg ipython
 
     # Checkout latest version of ndnSIM
-    mdkir ndnSIM_2.3_with_PIPS
+    mkdir ndnSIM_2.3_with_PIPS
     cd ndnSIM_2.3_with_PIPS
     git clone https://github.com/named-data-ndnSIM/ns-3-dev.git ns-3
     git clone https://github.com/named-data-ndnSIM/pybindgen.git pybindgen
@@ -77,6 +77,7 @@ The code was tested with ndnSIM version 2.3. on Ubuntu 16.04.1 LTS
     cd ../pips-scenario
     ./waf configure
     ./waf
+    sudo ldconfig
     ./waf --run=PIPS-scenario-simple --vis
 
 Compiling

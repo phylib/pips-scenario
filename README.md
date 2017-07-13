@@ -6,7 +6,7 @@ This repositories contains implementations for the following concepts and featur
 Installing and patching ndnSIM
 ==============================
 
-The code was tested with ndnSIM version 2.3.
+The code was tested with ndnSIM version 2.3. on Ubuntu 16.04.1 LTS
 
     # Installing dependencies
     sudo apt-get install build-essential libsqlite3-dev libcrypto++-dev libboost-all-dev libssl-dev git python-setuptools

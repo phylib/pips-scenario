@@ -1,7 +1,20 @@
 This repositories contains implementations for the following concepts and features for NDN:
 - Persistent Interests (PI) including a sample push-consumer and push-producer
+- An adaptive forwarding strategy for PIs
 - QoS Class Identifier (QCI), enabling QoS features in NDN
-- An adaptive forwarding strategy for PIs called "Persistent Intereset Probing Strategy" (PIPS)
+
+Available simulations
+=====================
+
+PIPS-scenario-simple
+---------------
+
+A simple scenario used to showcase the forwarding strategy in action.
+
+PIPS-scenario
+---------------
+
+An advanced scenario used for evaluations from http://dx.doi.org/10.1145/3125719.3132091
 
 Installing and patching ndnSIM
 ==============================
@@ -30,6 +43,7 @@ The code was tested with ndnSIM version 2.3. on Ubuntu 16.04.1 LTS
     git checkout 4692ba80cf1dcf07acbbaba8a134ea22481dd457
     cd ../../../
     ./waf configure -d optimized
+    # PyViz visualizer should be enabled
     ./waf
     sudo ./waf install
 
@@ -140,16 +154,3 @@ If you want to request automatic node placement, set up additional environment v
 or
 
     PKG_LIBRARY_PATH=/usr/local/lib NS_VIS_ASSIGN=1 ./waf --run <scenario_name> --vis
-
-Available simulations
-=====================
-
-PIPS-scenario-simple
----------------
-
-A simple scenario used to showcase the forwarding strategy in action.
-
-PIPS-scenario
----------------
-
-An advanced scenario used for reproducible evaluations.
